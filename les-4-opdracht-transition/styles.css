@@ -1,0 +1,33 @@
+:root {
+    --menu-bar-width: 60px;
+    --menu-bar-height: 10px;
+}
+
+#menu {
+    background-color: #D84282;
+    position: relative;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+    margin: 100px;
+}
+
+#menu::before,
+#menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #D84282;
+    width: var(--menu-bar-width);
+    height: var(--menu-bar-height);
+}
+
+#menu::before {
+    top: -20px;
+    left: 0;
+}
+
+#menu::after {
+    bottom: -20px;
+    left: 0;
+}
+
