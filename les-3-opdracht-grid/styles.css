@@ -1,0 +1,42 @@
+.content {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: rosybrown;
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 200px 400px 150px;
+    grid-template-areas:
+            "a a a b b b"
+            "c c c d d d"
+            "e e e e e e";
+}
+
+.ding {
+    background-color: brown;
+    border: 2px solid black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ding-A {
+    grid-area: a;
+}
+
+#ding-B {
+    grid-area: b;
+}
+
+#ding-C {
+    grid-area: c;
+}
+
+#ding-D {
+    grid-area: d;
+}
+
+#ding-E {
+    grid-area: e;
+}
