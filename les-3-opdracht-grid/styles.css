@@ -40,3 +40,18 @@
 #ding-E {
     grid-area: e;
 }
+
+@media screen and (max-width: 576px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        display: grid;
+        grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e";
+
+        }
+}

@@ -13,21 +13,40 @@
 
 #menu::before,
 #menu::after {
-    content: "";
-    display: block;
-    position: absolute;
     background-color: #D84282;
+    display: block;
+    content: "";
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
+    position: absolute;
 }
 
 #menu::before {
-    top: -20px;
     left: 0;
+    top: -20px;
 }
 
 #menu::after {
-    bottom: -20px;
     left: 0;
+    top: 20px;
+}
+#menuwrap {
+    display: block;
+    position: absolute;
 }
 
+#menuwrap:hover #menu {
+    width: 0;
+    transition: .1s ease-in-out;
+  }
+
+#menuwrap:hover #menu::before {
+    transform-origin: center;
+    transform: rotate(45deg) translate(29px,25px);
+    transition: .5s ease-in;
+   }
+#menuwrap:hover #menu::after {
+    transform-origin: center;
+    transform: rotate(-45deg);
+     transition: .5s ease-in;
+}
